@@ -1,0 +1,148 @@
+export const portfolioData = [
+  {
+    id: "wortal-sdk",
+    title: "Wortal SDK",
+    subtitle: "Unified Gaming Platform SDK",
+    description: "A unified JavaScript/TypeScript SDK that enables game developers to publish across 15+ distribution platforms (Facebook Instant Games, CrazyGames, Poki, Telegram, and others) with a single integration. Eliminates months of platform-specific development work by providing a consistent API layer.",
+    technologies: ["TypeScript", "Game Platform SDKs/APIs"],
+    role: "Full-Stack Developer",
+    period: "2021 - 2025",
+    screenshots: [],
+    highlights: [
+      "Built and maintained unified API supporting 15+ gaming platforms",
+      "Reduced integration time from months to days for game developers",
+      "Maintained detailed documentation and integration guides",
+      "Handled platform-specific quirks and API differences transparently",
+      "Published on our CDN with regular updates and bug fixes",
+    ],
+  },
+  {
+    id: "wortal-games",
+    title: "Wortal.Games",
+    subtitle: "Cross-Platform Gaming Destination",
+    description: "A gaming platform built with Next.js that showcases Wortal-powered games and drives organic discovery for developers. Features game browsing, categorization, search functionality, and responsive design.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Python (Django)"],
+    role: "Full-Stack Developer",
+    period: "2021 - 2025",
+    screenshots: [
+      {
+        src: "/images/wortal_games/ss-landing.png",
+        alt: "Wortal.Games Landing Page",
+        caption: "Main landing page with featured games",
+      },
+      {
+        src: "/images/wortal_games/ss-suggest.png",
+        alt: "Game Suggestions",
+        caption: "Personalized game recommendations",
+      },
+      {
+        src: "/images/wortal_games/ss-lib.png",
+        alt: "Game Library",
+        caption: "Complete game library view",
+      },
+      {
+        src: "/images/wortal_games/ss-kid.png",
+        alt: "K-ID compliance",
+        caption: "K-ID compliance",
+      },
+      {
+        src: "/images/wortal_games/ss-landing-mobile.png",
+        alt: "Mobile View",
+        caption: "Responsive mobile design",
+      },
+      {
+        src: "/images/wortal_games/ss-history.png",
+        alt: "Play History",
+        caption: "User play history tracking",
+      },
+    ],
+    highlights: [
+      "Built responsive, SEO-optimized gaming platform",
+      "Optimized performance for fast page loads",
+    ],
+  },
+  {
+    id: "wortal-dashboard",
+    title: "Wortal Developer Dashboard",
+    subtitle: "Analytics & Management Platform",
+    description: "Comprehensive developer dashboard built with React and Django for managing game publishing workflows, monitoring performance metrics, and making data-driven decisions. Processes millions of data points daily from BigQuery and multiple gaming platforms.",
+    technologies: ["React", "Python (Django)", "PostgreSQL", "BigQuery", "Stripe"],
+    role: "Full-Stack Developer",
+    period: "2021 - 2025",
+    screenshots: [
+      {
+        src: "/images/wortal_dash/ss-login.png",
+        alt: "Dashboard Login",
+        caption: "Secure authentication system",
+      },
+      {
+        src: "/images/wortal_dash/ss-dashboard.png",
+        alt: "Main Dashboard",
+        caption: "Analytics overview with active users and top games",
+      },
+      {
+        src: "/images/wortal_dash/ss-subscription.png",
+        alt: "Subscription Management",
+        caption: "Stripe-integrated subscription system",
+      },
+      {
+        src: "/images/wortal_dash/ss-payment.png",
+        alt: "Developer Revenue Payment Processing",
+        caption: "Developer Revenue Payment Processing",
+      },
+    ],
+    highlights: [
+      "Built comprehensive data pipelines processing millions of data points daily",
+      "Integrated Stripe payment processing and subscription management",
+      "Developed analytics dashboards",
+      "Optimized PostgreSQL queries for improved performance"
+    ],
+  },
+  {
+    id: "rfid-asset-tracking",
+    title: "RFID Asset Tracking System",
+    subtitle: "Real-time Workshop Asset Monitor",
+    description: "Built real-time RFID-based asset tracking system using Node.js (Express) and Socket.io to detect and monitor asset movement from workshops. Provides dashboard updates showing asset location and movement history for PT Total Bangun Persada Tbk.",
+    technologies: ["Node.js", "Express", "Socket.io", "SQL Server"],
+    role: "Full-Stack Developer",
+    period: "2018 - 2020",
+    screenshots: [],
+    highlights: [
+      "Implemented real-time asset tracking using RFID technology",
+      "Built WebSocket-based live dashboard for instant updates",
+      "Integrated with existing asset management system",
+      "Reduced asset loss and improved workshop efficiency",
+    ],
+  },
+  {
+    id: "asset-management-system",
+    title: "Asset Management",
+    subtitle: "Multi-Department Asset Management",
+    description: "Expanded asset management system from 2 to 4 departments at PT Total Bangun Persada Tbk, handling assets across multiple locations. Implemented fixed asset management module for Accounting Department and significantly improved SQL query performance.",
+    technologies: [".NET Framework", "ASP.NET", "C#", "SQL Server"],
+    role: "Software Engineer",
+    period: "2018 - 2020",
+    screenshots: [],
+    highlights: [
+      "Scaled system to handle assets across multiple departments",
+      "Implemented fixed asset management for accounting compliance",
+      "Integrated with finance systems",
+    ],
+  },
+  {
+    id: "rabobank-procurement",
+    title: "Procurement System",
+    subtitle: "End-to-End Procurement to Payment",
+    description: "Transformed complete procurement-to-payment business processes for Rabobank Indonesia using K2 platform and SQL Server. Built automated end-to-end workflow covering Purchase Requisition (PR), Purchase Order (PO), Goods Receipt, Invoice Verification, and Payment processing. Streamlined multi-level approval processes and improved operational efficiency across the entire procurement lifecycle.",
+    technologies: ["K2 Platform", "SQL Server", "Workflow Automation"],
+    role: "Software Engineer Consultant",
+    period: "2018 - 2019",
+    screenshots: [],
+    highlights: [
+      "Built complete procurement-to-payment flow: PR → PO → Goods Receipt → Invoice → Payment",
+      "Implemented multi-level approval workflows with K2 platform",
+      "Automated procurement process from requisition to payment completion",
+      "Improved procurement efficiency, transparency, and compliance"
+    ],
+  },
+];

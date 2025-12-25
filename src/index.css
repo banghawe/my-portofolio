@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+@layer components {
+  /* Retro CRT Screen Effect */
+  .retro-screen {
+    position: relative;
+    background: linear-gradient(to bottom, #0a0e27 0%, #1a1e3a 100%);
+  }
+
+  .retro-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Pixel Border */
+  .pixel-border {
+    box-shadow:
+      0 -4px 0 0 currentColor,
+      0 4px 0 0 currentColor,
+      -4px 0 0 0 currentColor,
+      4px 0 0 0 currentColor,
+      -4px -4px 0 0 currentColor,
+      4px -4px 0 0 currentColor,
+      -4px 4px 0 0 currentColor,
+      4px 4px 0 0 currentColor;
+  }
+
+  /* Pixel Button */
+  .pixel-btn {
+    @apply px-6 py-3 font-bold uppercase tracking-wider;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    clip-path: polygon(
+      0 4px, 4px 4px, 4px 0,
+      calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+      100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) 100%, 4px 100%, 4px calc(100% - 4px),
+      0 calc(100% - 4px)
+    );
+    transition: all 0.1s ease;
+  }
+
+  .pixel-btn:hover {
+    transform: translate(2px, 2px);
+  }
+
+  .pixel-btn:active {
+    transform: translate(4px, 4px);
+  }
+
+  /* Retro Card */
+  .retro-card {
+    @apply p-6 relative;
+    background: rgba(20, 25, 50, 0.8);
+    border: 4px solid;
+    clip-path: polygon(
+      0 8px, 8px 8px, 8px 0,
+      calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+      100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 8px) 100%, 8px 100%, 8px calc(100% - 8px),
+      0 calc(100% - 8px)
+    );
+  }
+
+  /* Glitch Text */
+  .glitch {
+    position: relative;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch::before {
+    animation: glitch-1 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    color: #00ffff;
+    z-index: -1;
+  }
+
+  .glitch::after {
+    animation: glitch-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite reverse;
+    color: #ff00ff;
+    z-index: -2;
+  }
+
+  /* Pixel Font Classes */
+  .font-pixel {
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .font-mono-pixel {
+    font-family: 'VT323', monospace;
+  }
+
+  /* Terminal Window */
+  .terminal-window {
+    @apply retro-card border-green-400;
+    background: rgba(0, 20, 0, 0.95);
+  }
+
+  .terminal-header {
+    @apply flex items-center gap-2 mb-4 pb-2 border-b-2 border-green-400;
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  }
+
+  /* Scanline animation */
+  @keyframes scanline {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      transparent 100%
+    );
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-2px, 2px);
+  }
+  66% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(2px, -2px);
+  }
+  66% {
+    transform: translate(-2px, 2px);
+  }
+}
