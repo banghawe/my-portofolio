@@ -21,7 +21,7 @@ export function Skills() {
   return (
     <section id="skills" className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-cyan-900/20 to-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-pixel text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-pixel text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 break-words px-2">
           SKILL_TREE
         </h2>
 

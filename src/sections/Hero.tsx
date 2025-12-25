@@ -2,13 +2,13 @@ import { cvData } from '../data/cvData';
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center retro-screen overflow-hidden relative">
+    <section id="home" className="min-h-screen flex items-center justify-center retro-screen overflow-hidden relative pt-20 md:pt-0">
       <div className="scanline"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center">
           <div className="mb-8">
             <h1
-              className="text-4xl md:text-6xl lg:text-7xl font-pixel text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 mb-4 glitch"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-pixel text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 mb-4 glitch leading-tight"
               data-text={cvData.personal.name}
             >
               {cvData.personal.name}

@@ -8,7 +8,7 @@ export function Portfolio() {
   return (
     <section id="portfolio" className="min-h-screen py-20 bg-gradient-to-b from-gray-900 via-pink-900/20 to-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-pixel text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-pixel text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 break-words px-2">
           PROJECT_FILES
         </h2>
 

@@ -36,7 +36,7 @@ export function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-gray-900/95 backdrop-blur-sm border-b-4 border-cyan-400'
-            : 'bg-transparent'
+            : 'bg-gray-900/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none'
         }`}
       >
         <div className="container mx-auto px-4">
@@ -45,7 +45,7 @@ export function Navigation() {
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="font-pixel text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-300 hover:to-purple-300"
+              className="font-pixel text-sm sm:text-base md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-300 hover:to-purple-300"
             >
               BANGHAWE.COM
             </a>
