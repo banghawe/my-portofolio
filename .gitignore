@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Wrangler
+.wrangler
+wrangler-state
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

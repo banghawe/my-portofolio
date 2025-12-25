@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "pages:dev": "wrangler pages dev dist"
   },
   "keywords": [],
   "author": "Hendra Wardana",
