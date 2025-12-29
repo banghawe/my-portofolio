@@ -2,11 +2,12 @@ import { cvData } from '../data/cvData';
 
 export function Skills() {
   const skillCategories = [
-    { title: 'FRONTEND', items: cvData.skills.frontend, color: 'purple' },
-    { title: 'BACKEND', items: cvData.skills.backend, color: 'pink' },
-    { title: 'DATABASE', items: cvData.skills.database, color: 'green' },
-    { title: 'CLOUD_&_DEVOPS', items: cvData.skills.cloud, color: 'yellow' },
-    { title: 'INTEGRATIONS', items: cvData.skills.integrations, color: 'blue' },
+    { title: 'PROGRAMMING_LANGUAGES', items: cvData.skills["Programming Languages"], color: 'cyan' },
+    { title: 'FRONTEND', items: cvData.skills["Frontend Development"], color: 'purple' },
+    { title: 'BACKEND', items: cvData.skills["Backend Development"], color: 'pink' },
+    { title: 'DATABASE_&_ANALYTICS', items: cvData.skills["Databases & Analytics"], color: 'green' },
+    { title: 'CLOUD_&_DEVOPS', items: cvData.skills["Cloud & DevOps"], color: 'yellow' },
+    { title: 'MONETIZATION', items: cvData.skills["Payments & Monetization"], color: 'blue' },
   ];
 
   const colorClasses: Record<string, { border: string; text: string; bg: string }> = {
@@ -53,7 +54,7 @@ export function Skills() {
               <p className="text-xl text-cyan-400">{cvData.education.degree}</p>
               <p className="text-lg text-purple-300">{cvData.education.school}</p>
               <p className="text-sm text-gray-400">{cvData.education.period}</p>
-              <p className="text-sm text-green-400 mt-3">🏆 {cvData.education.achievement}</p>
+              <p className="text-sm text-green-400 mt-3">🏆 {cvData.education.achievements}</p>
             </div>
           </div>
         </div>

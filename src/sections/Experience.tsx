@@ -30,17 +30,48 @@ export function Experience() {
                 </div>
               </div>
 
-              <div className="mb-4">
-                <h4 className="font-pixel text-xs text-green-400 mb-3 break-words">KEY_RESPONSIBILITIES:</h4>
-                <ul className="space-y-2">
-                  {exp.responsibilities.map((resp, i) => (
-                    <li key={i} className="font-mono-pixel text-sm sm:text-base text-gray-300 flex">
-                      <span className="text-cyan-400 mr-2 flex-shrink-0">▸</span>
-                      <span className="break-words">{resp}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {'description' in exp && exp.description && (
+                <div className="mb-4">
+                  <p className="font-mono-pixel text-sm sm:text-base text-gray-300 break-words">{exp.description}</p>
+                </div>
+              )}
+
+              {'responsibilities' in exp && exp.responsibilities && (
+                <div className="mb-4">
+                  <h4 className="font-pixel text-xs text-green-400 mb-3 break-words">KEY_RESPONSIBILITIES:</h4>
+                  <ul className="space-y-2">
+                    {exp.responsibilities.map((resp, i) => (
+                      <li key={i} className="font-mono-pixel text-sm sm:text-base text-gray-300 flex">
+                        <span className="text-cyan-400 mr-2 flex-shrink-0">▸</span>
+                        <span className="break-words">{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {'projects' in exp && exp.projects && (
+                <div className="mb-4">
+                  <h4 className="font-pixel text-xs text-green-400 mb-3 break-words">PROJECTS:</h4>
+                  <div className="space-y-4">
+                    {exp.projects.map((project, projIndex) => (
+                      <div key={projIndex} className="pl-4 border-l-2 border-purple-400/30">
+                        <p className="font-mono-pixel text-sm sm:text-base text-purple-300 mb-2 break-words font-semibold">
+                          {project.client}
+                        </p>
+                        <ul className="space-y-2">
+                          {project.responsibilities.map((resp, i) => (
+                            <li key={i} className="font-mono-pixel text-sm sm:text-base text-gray-300 flex">
+                              <span className="text-cyan-400 mr-2 flex-shrink-0">▸</span>
+                              <span className="break-words">{resp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div>
                 <h4 className="font-pixel text-xs text-pink-400 mb-3 break-words">TECH_STACK:</h4>
